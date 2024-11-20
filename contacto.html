@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  
+  <link rel="stylesheet" href="./css/contactoCSS.css">
+  
+  <!-- Enlace al CSS de Leaflet para mostrar el mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+   <header>
+        <div class="logo">
+            <!-- Logo de la empresa -->
+            <img src="fotos/megateclogo.png" alt="Logo de la empresa" width="246" height="246">
+            <h1>MEGATEC</h1>
+        </div>
+        <nav>
+          <a href="index.html">Inicio</a>
+            <a href="galeria.html">Galería</a>
+         <a href="presupuesto.html">Presupuesto</a>
+        <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+    </header>
+
+  <main>
+    <div class="contact-container">
+      <h1>Contacto</h1>
+
+      <!-- Mapa que se insertará mediante Leaflet -->
+      <div id="mapa" class="map-section">
+      </div>
+
+      <section class="contact-info">
+        <h2>Información de Contacto</h2>
+        <p>Teléfono: +34 602 66 34 23</p>
+        <p>Email: megatecPG@gmail.com</p>
+        <p>Dirección: Miguel romero 7</p>
+      </section>
+
+      <!-- Formulario de contacto -->
+      <section class="contact-form">
+        <h2>Envíanos un mensaje</h2>
+        <form id="contact-form">
+          <!-- Campo para el nombre -->
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <!-- Campo para el email -->
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <!-- Campo para el mensaje -->
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+          <!-- Botón para enviar el formulario -->
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2024 MEGATEC. C/Miguel Romero, 7. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <!-- Enlaces a las redes sociales -->
+            <a href="https://www.facebook.com/profile.php?id=61568960853478">
+                <img src="fotos/facebook.png" alt="Facebook" width="800" height="800">
+            </a>
+            <a href="https://x.com/megatecpg?s=21&t=KBbnu8gS4G15GbXMsIWU9g">
+                <img src="fotos/x.png" alt="Twitter" width="512" height="512">
+            </a>
+        </div>
+    </div>
+</footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.12/leaflet-routing-machine.min.js"></script>
+  <script src="./java/javaCONTACTO.js"></script>
+</body>
+</html>

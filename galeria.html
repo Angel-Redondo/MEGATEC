@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galería</title>
+
+    <link rel="stylesheet" href="./css/galeriaCSS.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="java/javaGALERIA.js"></script>
+</head>
+<body>
+  
+      <header>
+        <div class="logo">
+            <!-- Logo de la empresa -->
+            <img src="fotos/megateclogo.png" alt="Logo de la empresa" width="246" height="246">
+            <h1>MEGATEC</h1>
+        </div>
+        <nav>
+          <!-- Enlaces del menú -->
+          <a href="index.html">Inicio</a>
+            <a href="galeria.html" class="active">Galería</a>
+         <a href="presupuesto.html">Presupuesto</a>
+        <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+ 
+    <main>
+      
+    
+        
+     
+        <section class="gallery">
+            <h2>Galería de Imágenes</h2>
+        
+            <!-- Mostrar la imagen seleccionada en grande (lightbox) -->
+            <div id="lightbox" class="lightbox">
+                <img class="lightbox-img" id="lightbox-img" src="-" alt="Imagen ampliada" width="800" height="800">
+            </div>
+        
+            <!-- Contenedor de las miniaturas de imágenes -->
+            <div class="gallery-container"></div>
+        </section>
+    </main>
+
+<footer>
+        <div class="footer-content">
+   
+            <p>&copy; 2024 MEGATEC. C/Miguel Romero, 7. Todos los derechos reservados.</p>
+            <div class="social-media">
+
+                <a href="https://www.facebook.com/profile.php?id=61568960853478"><img src="fotos/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/megatecpg?s=21&t=KBbnu8gS4G15GbXMsIWU9g"><img src="fotos/x.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

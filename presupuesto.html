@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto</title>
+  
+  <link rel="stylesheet" href="./css/presupuestoCSS.css">
+</head>
+
+<body>
+    
+    <header>
+      <div class="logo">
+        <!-- Logo de la empresa -->
+        <img src="fotos/megateclogo.png" alt="Logo de la empresa" width="246" height="246">
+        <h1>MEGATEC</h1>
+        </div>
+        <nav>
+          <a href="index.html">Inicio</a>
+            <a href="galeria.html">Galería</a>
+         <a href="presupuesto.html" class="active">Presupuesto</a>
+        <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <br>
+  <main>
+    <div class="presupuesto-container">
+      <h2>Presupuesto Personalizado</h2>
+      <form id="presupuesto-form" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Datos de Contacto</legend>
+          
+            <!-- Campo de nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" maxlength="15" oninput="validateText(this, 15)" required>
+            <span id="nombre-error" class="error-message">Solo letras, máx. 15 caracteres</span>
+            <br>
+            <!-- Campo de apellidos -->
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="40" oninput="validateText(this, 40)" required>
+            <span id="apellidos-error" class="error-message">Solo letras, máx. 40 caracteres</span>
+            <br>
+            <!-- Campo de email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" oninput="validateEmail(this)" required>
+            <span id="email-error" class="error-message">Correo inválido</span>
+            <br>
+            <!-- Campo de teléfono -->
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" oninput="validateNumbers(this)" minlength="9"  required>
+            <span id="telefono-error" class="error-message">Solo números, obligatorio 9 caracteres.</span>
+
+            
+        </fieldset>
+
+        <fieldset>
+          <legend>Elige tus opciones</legend>
+
+          <div class="form-group">
+            <input type="radio" id="web-basica" name="producto" value="web-basica">
+            <label for="web-basica">Página web básica</label>
+          </div>
+
+          <div class="form-group">
+            <input type="radio" id="web-avanzada" name="producto" value="web-avanzada">
+            <label for="web-avanzada">Página web avanzada</label>
+          </div>
+
+          <div class="form-group">
+            <input type="radio" id="tienda-online" name="producto" value="tienda-online">
+            <label for="tienda-online">Tienda online</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras Opcionales</legend>
+
+          <div class="form-group">
+            <input type="checkbox" id="seo" name="extras" value="seo">
+            <label for="seo">Optimización SEO</label>
+          </div>
+
+          <div class="form-group">
+            <input type="checkbox" id="social" name="extras" value="social">
+            <label for="social">Gestión de redes sociales</label>
+          </div>
+
+          <div class="form-group">
+            <input type="checkbox" id="mantenimiento" name="extras" value="mantenimiento">
+            <label for="mantenimiento">Mantenimiento mensual</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Descuentos y Envío</legend>
+      
+          <div class="form-group">
+              <label for="plazo">Elige el plazo:</label>
+              <select id="plazo" name="plazo">
+                  <option value="1mes">1 Mes - Sin descuento</option>
+                  <option value="3meses">3 Meses - 5% descuento</option>
+                  <option value="6meses">6 Meses - 10% descuento</option>
+              </select>
+          </div>
+      
+          <div class="form-group">
+              <input type="checkbox" id="condiciones" name="condiciones" required>
+              <label for="condiciones">Acepto las condiciones</label>
+          </div>
+      </fieldset>
+      
+      <!-- Contenedor para el total -->
+      <div id="total-container" style="text-align: center; margin-bottom: 15px;">
+          <p id="total-display" style="font-weight: bold; font-size: 1.2em;">Total: 0 €</p>
+      </div>
+      
+      <button type="submit">Calcular Presupuesto</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2024 MEGATEC. C/Miguel Romero, 7. Todos los derechos reservados.</p>
+        <div class="social-media">
+            <!-- Enlaces a las redes sociales -->
+            <a href="https://www.facebook.com/profile.php?id=61568960853478">
+                <img src="fotos/facebook.png" alt="Facebook" width="800" height="800">
+            </a>
+            <a href="https://x.com/megatecpg?s=21&t=KBbnu8gS4G15GbXMsIWU9g">
+                <img src="fotos/x.png" alt="Twitter" width="512" height="512">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="./java/javaPRESUPUESTO.js"></script>
+</body>
+</html>
